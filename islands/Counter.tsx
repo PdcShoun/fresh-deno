@@ -10,7 +10,6 @@ interface CounterProps {
 
 export default function Counter(props: CounterProps) {
   const [count, setCount] = useState(props.start);
-  console.log(count)
   console.log(props)
   return (
     <div>
