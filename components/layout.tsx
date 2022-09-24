@@ -9,6 +9,7 @@ export default function layout({children}: any) {
         <a href="/about">About</a>
         <a href="/greet">DynamicRoute</a>
         <a href="/user/0">CustomHandlers</a>
+        <a href="/git/PdcShoun">FetchingData</a>
       </nav>
       {children}
     </div>
