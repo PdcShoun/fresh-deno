@@ -14,4 +14,6 @@ This will watch the project directory and restart as necessary.
 
 Start the project with docker-compose:
 
+```
 docker-compose up
+```
