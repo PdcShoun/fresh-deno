@@ -22,7 +22,7 @@ export const handler: Handlers<User | null> = {
   },
 };
 
-export default function Page({ data }: PageProps<User | null>) {
+export default function GithubProfile({ data }: PageProps<User | null>) {
   console.log(data)
   if (!data) {
     return (
