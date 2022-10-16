@@ -1,13 +1,15 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
 import Counter from "../islands/Counter.tsx";
 import Layout from "../components/layout.tsx";
 
 export default function Home() {
   return (
     <Layout>
-      <div class={tw`p-4 mx-auto max-wscreen-md`}>
+      <div class="p-4 mx-auto">
+        <img
+          src="/logo.svg"
+          class="w-32 h-32 mx-auto"
+          alt="the fresh logo: a sliced lemon dripping with juice"
+        />
         <h1>
           Home
         </h1>
@@ -15,6 +17,7 @@ export default function Home() {
           Welcome to `fresh`. Try updating this message in the ./routes/index.tsx
           file, and refresh.
         </p>
+
         <Counter start={3} />
       </div>
     </Layout>

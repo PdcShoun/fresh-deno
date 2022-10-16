@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import Layout from "../../components/layout.tsx"
 
@@ -31,13 +29,17 @@ export default function GithubProfile({ data }: PageProps<User | null>) {
       </Layout>
     )
   }
+  const stylePic = "mx-auto"
+  const styleText = "text-center"
 
   return (
     <Layout>
-      <img src={data.avatar_url} width={150} height={150} />
-      <h1>{data.name}</h1>
-      <p>{data.login}</p>
-      <a href={data.html_url}>Link to GitHub</a>
+      <section class="max-w-screen-md mx-auto my-16 px(4 sm:6 md:8) space-y-4">
+        <img src={data.avatar_url} width={150} height={150} class={stylePic}/>
+        <h1 class={styleText}>{data.name}</h1>
+        <p class={styleText}>{data.login}</p>
+        <a href={data.html_url} class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Link to GitHub</a>
+      </section>
     </Layout>
   );
 }
