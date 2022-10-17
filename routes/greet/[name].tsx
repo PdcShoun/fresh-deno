@@ -4,7 +4,7 @@ import Layout from "../../components/layout.tsx";
 export default function GreetPage(props: PageProps) {
   console.log(props)
   const { name } = props.params;
-  const lastName = 'O-Cha'
+  const lastName = 'Last Name'
   const fulltName = props.params.name + ' ' + lastName;
   const route = props.route
   return (

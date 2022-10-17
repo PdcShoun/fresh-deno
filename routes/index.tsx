@@ -1,9 +1,11 @@
 import Counter from "../islands/Counter.tsx";
 import Layout from "../components/layout.tsx";
+import Header from "../components/Header.tsx"
 
 export default function Home() {
   return (
-    <Layout>
+    <div>
+      <Header/>
       <div class="p-4 mx-auto">
         <img
           src="/logo.svg"
@@ -20,6 +22,6 @@ export default function Home() {
 
         <Counter start={3} />
       </div>
-    </Layout>
+    </div>
   );
 }
