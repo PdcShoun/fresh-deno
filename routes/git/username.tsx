@@ -42,7 +42,7 @@ export default function GithubProfile({ params, data }: PageProps) {
           <img src={data.avatar_url} width={150} height={150} class={stylePic}/>
           <h1 class={styleText}>{data.name}</h1>
           <p class={styleText}>{data.login}</p>
-          <a href={data.html_url} class="mx-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Link to GitHub</a>
+          <a href={data.html_url} class="mx-auto bg-blue-400 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">Link to GitHub</a>
         </div>
       </section>
     </Layout>

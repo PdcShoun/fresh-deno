@@ -1,8 +1,10 @@
 import Counter from "../islands/Counter.tsx";
-import Layout from "../components/layout.tsx";
 import Header from "../components/Header.tsx"
+import { PageProps } from "$fresh/server.ts";
 
-export default function Home() {
+export default function Home(page: PageProps) {
+  // console.log(page)
+  console.log('Home is working')
   return (
     <div>
       <Header/>

@@ -2,7 +2,7 @@ import { PageProps, Handlers } from "$fresh/server.ts";
 import Layout from "../../components/layout.tsx"
 
 export const handler: Handlers = {
-  async GET(req, ctx) {
+  async GET(req, ctx): Promise<Response> {
     console.log('GET Working')
     const users = [
       {name: 'John'},
@@ -12,7 +12,7 @@ export const handler: Handlers = {
     const resp = await ctx.render(users);
     return resp;
   },
-  async POST(req, ctx): Response {
+  async POST(req, ctx): Promise<Response> {
     console.log('POST Working')
     const users = [
       {name: 'Zee'},
@@ -25,7 +25,7 @@ export const handler: Handlers = {
 };
 
 export default function UserPage(page: PageProps) {
-  // console.log(page)
+  console.log(page)
   const id = page.params.id
   const data = page.data[id] ? page.data[id].name : 'No Data'
   const users = page.data

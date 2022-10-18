@@ -1,8 +1,9 @@
 import Header from "../components/Header.tsx"
 
 
-export default function AboutPage() {
+export default function AboutPage(prop) {
   console.log('From About')
+  console.log(prop)
   return (
     <div>
       <Header/>
